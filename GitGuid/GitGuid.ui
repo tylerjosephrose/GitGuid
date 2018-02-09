@@ -68,7 +68,10 @@
      <string>GitGuid</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="LogInButton">
+   <widget class="QPushButton" name="logInButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -145,7 +148,7 @@
  <tabstops>
   <tabstop>gitUsername</tabstop>
   <tabstop>gitPassword</tabstop>
-  <tabstop>LogInButton</tabstop>
+  <tabstop>logInButton</tabstop>
   <tabstop>cancelButton</tabstop>
  </tabstops>
  <resources>

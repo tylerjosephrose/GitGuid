@@ -3,6 +3,8 @@
 #include <QtWidgets/QMainWindow>
 #include "GeneratedFiles/ui_GitGuid.h"
 
+#include <string.h>
+
 class GitGuid : public QMainWindow
 {
 	Q_OBJECT
@@ -12,4 +14,9 @@ public:
 
 private:
 	Ui::GitGuidClass ui;
+
+	
+private slots:
+	void checkInput();
+	void loginInput();
 };

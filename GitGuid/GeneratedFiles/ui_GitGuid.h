@@ -32,7 +32,7 @@ public:
     QLabel *gitUsernameLabel;
     QLabel *gitPasswordLabel;
     QLabel *title;
-    QPushButton *LogInButton;
+    QPushButton *logInButton;
     QPushButton *cancelButton;
     QLineEdit *gitUsername;
     QLineEdit *gitPassword;
@@ -63,9 +63,10 @@ public:
         QFont font1;
         font1.setPointSize(26);
         title->setFont(font1);
-        LogInButton = new QPushButton(centralWidget);
-        LogInButton->setObjectName(QStringLiteral("LogInButton"));
-        LogInButton->setGeometry(QRect(440, 210, 75, 23));
+        logInButton = new QPushButton(centralWidget);
+        logInButton->setObjectName(QStringLiteral("logInButton"));
+        logInButton->setEnabled(false);
+        logInButton->setGeometry(QRect(440, 210, 75, 23));
         cancelButton = new QPushButton(centralWidget);
         cancelButton->setObjectName(QStringLiteral("cancelButton"));
         cancelButton->setGeometry(QRect(330, 210, 75, 23));
@@ -89,8 +90,8 @@ public:
         statusBar->setObjectName(QStringLiteral("statusBar"));
         GitGuidClass->setStatusBar(statusBar);
         QWidget::setTabOrder(gitUsername, gitPassword);
-        QWidget::setTabOrder(gitPassword, LogInButton);
-        QWidget::setTabOrder(LogInButton, cancelButton);
+        QWidget::setTabOrder(gitPassword, logInButton);
+        QWidget::setTabOrder(logInButton, cancelButton);
 
         retranslateUi(GitGuidClass);
         QObject::connect(cancelButton, SIGNAL(released()), GitGuidClass, SLOT(close()));
@@ -104,7 +105,7 @@ public:
         gitUsernameLabel->setText(QApplication::translate("GitGuidClass", "Github Username:", nullptr));
         gitPasswordLabel->setText(QApplication::translate("GitGuidClass", "Github Password:", nullptr));
         title->setText(QApplication::translate("GitGuidClass", "GitGuid", nullptr));
-        LogInButton->setText(QApplication::translate("GitGuidClass", "Log In", nullptr));
+        logInButton->setText(QApplication::translate("GitGuidClass", "Log In", nullptr));
         cancelButton->setText(QApplication::translate("GitGuidClass", "Cancel", nullptr));
     } // retranslateUi
 
