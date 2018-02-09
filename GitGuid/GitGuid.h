@@ -17,6 +17,7 @@ private:
 
 	
 private slots:
-	void checkInput();
+	bool checkInput();
 	void loginInput();
+	void verifyLogin();
 };
